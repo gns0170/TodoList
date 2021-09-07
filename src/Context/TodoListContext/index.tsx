@@ -11,7 +11,7 @@ const TodoListContext = createContext<ITodoListContext>({
     removeTodoList : (index: number): void => {},
 });
 
-const TodoListContextPovider = ({children}: Props)=> {
+const TodoListContextProvider = ({children}: Props)=> {
     const [todoList, setTodoList]=useState<Array<string>>([]);
 
     const addTodoList = (todo:string):void => {
@@ -54,4 +54,4 @@ const TodoListContextPovider = ({children}: Props)=> {
     );
 };
 
-export {TodoListContextPovider,TodoListContext};
+export {TodoListContextProvider,TodoListContext};
