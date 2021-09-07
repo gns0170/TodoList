@@ -1,18 +1,19 @@
 {
-    "compilerOption": {
-        "allowsJs": true,
+    "compilerOptions": {
+        "allowJs": true,
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop" : true,
+        "esModuleInterop": true,
         "isolatedModules": true,
         "jsx": "react",
         "lib": ["es6"],
         "moduleResolution": "node",
         "noEmit": true,
+        "noImplicitAny": false,
         "strict" : true,
         "target": "esnext",
         "baseUrl": "./src",
         "paths":{
-            "-/*":["*"]
+            "~/*":["*"]
         }
     },
     "exclude": [

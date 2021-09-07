@@ -16,6 +16,7 @@ node_modules/react-native/Libraries/polyfills/.*
 
 [include]
 
+
 [libs]
 node_modules/react-native/interface.js
 node_modules/react-native/flow/

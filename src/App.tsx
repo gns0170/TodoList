@@ -1,4 +1,4 @@
-import React, { Fragment} from 'react';
+import React, {Fragment} from 'react';
 import { StatusBar, SafeAreaView } from 'react-native';
 
 import {
@@ -9,7 +9,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Styled from 'styled-components/native';
+import * as Styled from 'styled-components/native';
 
 const ScrollView = Styled.ScrollView`
 background-color: ${Colors.lighter};
@@ -20,13 +20,8 @@ background-color: ${Colors.white};
 `;
 
 const SectionContainer = Styled.View`
-margin-top : 32px;
+margin-top: 32px;
 padding-horizontal:24px;
-`;
-
-const SectionContainer = Styled.View`
-margin-top : 32px;
-padding-horizontal: 24px;
 `;
 
 const SectionDescription = Styled.Text`
@@ -83,3 +78,4 @@ const App = ({}:Props)=>{
 
   )
 }
+export default App;
