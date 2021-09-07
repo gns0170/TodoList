@@ -9,7 +9,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import * as Styled from 'styled-components/native';
+import Styled from 'styled-components/native'
 
 const ScrollView = Styled.ScrollView`
 background-color: ${Colors.lighter};
