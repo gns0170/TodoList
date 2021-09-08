@@ -1,38 +1,21 @@
-import React, { useContext } from 'react';
-import {FlatList} from 'react-native'; 
+import React from 'react';
 import Styled from 'styled-components/native';
 
-import { TodoListContext} from '~/Context/TodoListContext';
-
-import EmptyItem from './EmptyItem'
+import Header from './Header';
 import TodoList from './TodoList';
 
-const Container = Styled(FlatList)`
+const Container = Styled.SafeAreaView`
+    flex: 1;
 `;
 
+interface Props {}
 
-
-interface Props{}
-
-const TodoListList = ({}: Props) =>{
-    const { todoList, removeTodoList } = useContext<ITodoListContext>(
-        TodoListContext
-    );
+const TodoListView = ({}:Props)=>{
     return(
-        <Container
-            data = {todoList}
-            keyExtractor= {(item, index)=>{
-                return `todo-${index}`;
-            }}
-            ListEmptyComponent = {<EmptyItem />}
-            renderItem = {({item,index})=>(
-                <TodoItem
-                    text= {item as string}
-                    onDelete={()=> removeTodoList(index)}
-                />
-            )}
-            contentContainerStyle = {todoList.length === 0 && {flex:1}}
-        />
+        <Container>
+            <Header />
+            <TodoList />
+        </Container>
     );
 };
-export default TodoListList;
+export default TodoListView;
